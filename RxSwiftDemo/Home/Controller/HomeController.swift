@@ -23,6 +23,7 @@ class HomeController: UIViewController {
     }()
     
     
+    var disposebag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +82,7 @@ class HomeController: UIViewController {
         }
         ob11.subscribe {
             print($0)
-        }
+        }.disposed(by: disposebag)
         
         
         //该个方法相当于是创建一个 Observable 工厂，通过传入一个 block 来执行延迟 Observable序列创建的行为，而这个 block 里就是真正的实例化序列对象的地方。
@@ -98,30 +99,30 @@ class HomeController: UIViewController {
         
         ob12.subscribe { (event) in
             print(odd,event)
-        }
+        }.disposed(by: DisposeBag())
         
         ob12.subscribe { (event) in
             print(odd,event)
-        }
+        }.disposed(by: DisposeBag())
         
         //这个方法创建的 Observable 序列每隔一段设定的时间，会发出一个索引数的元素。而且它会一直发送下去
-        let ob13 = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+        let ob13 = Observable<Int>.interval(DispatchTimeInterval.seconds(1), scheduler: MainScheduler.instance)
         ob13.subscribe { (event) in
 //            print(event.element)
-        }
+        }.disposed(by: DisposeBag())
         
         
         //这个方法有两种用法，一种是创建的 Observable序列在经过设定的一段时间后，产生唯一的一个元素。
         //第一个参数是延迟时长
-        let ob14 = Observable<Int>.timer(2, scheduler: MainScheduler.instance)
+        let ob14 = Observable<Int>.timer(DispatchTimeInterval.seconds(2), scheduler: MainScheduler.instance)
         ob14.subscribe{event in
 //            print(event)
-        }
+        }.disposed(by: disposebag)
         //另一种是创建的 Observable 序列在经过设定的一段时间后，每隔一段时间产生一个元素。
-        let ob15 = Observable<Int>.timer(2, period: 1, scheduler: MainScheduler.instance)
+        let ob15 = Observable<Int>.timer(DispatchTimeInterval.seconds(2), period: DispatchTimeInterval.seconds(1), scheduler: MainScheduler.instance)
         ob15.subscribe{ event in
 //            print(event)
-        }
+        }.disposed(by: disposebag)
         print("-----------")
         let ob16 = Observable.of("A", "B", "C")
         ob16.do(onNext: { element in
@@ -141,7 +142,7 @@ class HomeController: UIViewController {
             print("completed")
         }, onDisposed: {
             print("disposed")
-        })
+        }).disposed(by: DisposeBag())
 
         
         
@@ -197,6 +198,22 @@ extension HomeController : UITableViewDelegate{
         case 0:
             let tableVc = TableUseViewController()
             self.navigationController?.pushViewController(tableVc, animated: true)
+        case 2:
+            let secondVc = SeconedViewController()
+            self.navigationController?.pushViewController(secondVc, animated: true)
+        case 3:
+            let bufferVc = BufferViewController()
+            self.navigationController?.pushViewController(bufferVc, animated: true)
+        case 4:
+            let windowVc = WindowViewController()
+            self.navigationController?.pushViewController(windowVc, animated: true)
+        case 5:
+            let mapVc = MapViewController()
+            self.navigationController?.pushViewController(mapVc, animated: true)
+        case 6:
+            let flatMapVc = FlatMapViewController()
+            self.navigationController?.pushViewController(flatMapVc, animated: true)
+            
         default:
             return
         }

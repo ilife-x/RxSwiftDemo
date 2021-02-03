@@ -10,6 +10,12 @@ import Foundation
 struct FunctionViewModel {
     let data = [
         Function(name: "RxSwift 基本使用"),
-        Function(name: "just使用")
+        Function(name: "just使用"),
+        Function(name: "binder使用"),
+        Function(name: "buffer使用"),
+        Function(name: "window使用"),
+        Function(name: "map 使用")
+
+
     ]
 }
