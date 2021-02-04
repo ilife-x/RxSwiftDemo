@@ -9,12 +9,20 @@
 import Foundation
 struct FunctionViewModel {
     let data = [
-        Function(name: "RxSwift 基本使用"),
-        Function(name: "just使用"),
-        Function(name: "binder使用"),
-        Function(name: "buffer使用"),
-        Function(name: "window使用"),
-        Function(name: "map 使用")
+        Function(name: "RxSwift 使用"),
+        Function(name: "just 使用"),
+        Function(name: "binder 使用"),
+        Function(name: "buffer 使用"),
+        Function(name: "window 使用"),
+        Function(name: "map 使用"),
+        Function(name: "flatmap 使用"),
+        Function(name: "scan 使用"),
+        Function(name: "GroupBy 使用"),
+        Function(name: "Filter 使用"),
+        Function(name: "distinctUntilChanged 使用")
+
+
+
 
 
     ]

@@ -144,20 +144,7 @@ class HomeController: UIViewController {
             print("disposed")
         }).disposed(by: DisposeBag())
 
-        
-        
-        
-        
-        
-        
-
-        
-        
-        
-    
-        
-        
-        
+   
         self.title = "home"
         view.addSubview(tableView)
         tableView.delegate = self
@@ -213,6 +200,18 @@ extension HomeController : UITableViewDelegate{
         case 6:
             let flatMapVc = FlatMapViewController()
             self.navigationController?.pushViewController(flatMapVc, animated: true)
+        case 7:
+            let scanVc = ScanViewController()
+            self.navigationController?.pushViewController(scanVc, animated: true)
+        case 8:
+            let groupByVc = GroupByViewController()
+            self.navigationController?.pushViewController(groupByVc, animated: true)
+        case 9:
+            let filterVc = FilterViewController()
+            self.navigationController?.pushViewController(filterVc, animated: true)
+        case 10:
+            let UntilChangedVc = UntilChangedViewController()
+            self.navigationController?.pushViewController(UntilChangedVc, animated: true)
             
         default:
             return
