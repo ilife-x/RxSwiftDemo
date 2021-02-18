@@ -210,8 +210,11 @@ extension HomeController : UITableViewDelegate{
             let filterVc = FilterViewController()
             self.navigationController?.pushViewController(filterVc, animated: true)
         case 10:
-            let UntilChangedVc = UntilChangedViewController()
-            self.navigationController?.pushViewController(UntilChangedVc, animated: true)
+            let untilChangedVc = UntilChangedViewController()
+            self.navigationController?.pushViewController(untilChangedVc, animated: true)
+        case 11:
+            let singleVc = SingleViewController()
+            self.navigationController?.pushViewController(singleVc, animated: true)
             
         default:
             return

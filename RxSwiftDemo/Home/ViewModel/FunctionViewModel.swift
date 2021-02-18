@@ -19,7 +19,9 @@ struct FunctionViewModel {
         Function(name: "scan 使用"),
         Function(name: "GroupBy 使用"),
         Function(name: "Filter 使用"),
-        Function(name: "distinctUntilChanged 使用")
+        Function(name: "distinctUntilChanged 使用"),
+        Function(name: "single & elementAt 使用")
+
 
 
 
