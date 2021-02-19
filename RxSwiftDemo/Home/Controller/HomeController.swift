@@ -215,6 +215,9 @@ extension HomeController : UITableViewDelegate{
         case 11:
             let singleVc = SingleViewController()
             self.navigationController?.pushViewController(singleVc, animated: true)
+        case 12:
+            let debounceVc = DebounceViewController()
+            self.navigationController?.pushViewController(debounceVc, animated: true)
             
         default:
             return

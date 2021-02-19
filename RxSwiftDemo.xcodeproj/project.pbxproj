@@ -18,6 +18,7 @@
 		118C574624E3957A007D756E /* RxSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C574524E3957A007D756E /* RxSwiftDemoUITests.swift */; };
 		11B0AB5725BA7D2B00F67EB2 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0AB5625BA7D2B00F67EB2 /* TableModel.swift */; };
 		11B90C6B25DE570700B02988 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B90C6A25DE570700B02988 /* SingleViewController.swift */; };
+		11B90C7025DFA10A00B02988 /* DebounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B90C6F25DFA10A00B02988 /* DebounceViewController.swift */; };
 		11BE4F8F25B963620063B182 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE4F8E25B963620063B182 /* HomeCell.swift */; };
 		11BE4F9F25B965E10063B182 /* TableUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE4F9E25B965E10063B182 /* TableUseViewController.swift */; };
 		11BE4FAD25B96BE10063B182 /* FunctionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE4FAC25B96BE10063B182 /* FunctionModel.swift */; };
@@ -71,6 +72,7 @@
 		118C577224E3E37C007D756E /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B0AB5625BA7D2B00F67EB2 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		11B90C6A25DE570700B02988 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
+		11B90C6F25DFA10A00B02988 /* DebounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceViewController.swift; sourceTree = "<group>"; };
 		11BE4F8E25B963620063B182 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		11BE4F9E25B965E10063B182 /* TableUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUseViewController.swift; sourceTree = "<group>"; };
 		11BE4FAC25B96BE10063B182 /* FunctionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				11BEF28925CBDC3300A68C34 /* FilterViewController.swift */,
 				11BEF28E25CBDF0F00A68C34 /* UntilChangedViewController.swift */,
 				11B90C6A25DE570700B02988 /* SingleViewController.swift */,
+				11B90C6F25DFA10A00B02988 /* DebounceViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				11BEF27B25CAA61300A68C34 /* FlatMapViewController.swift in Sources */,
 				118698A125C8F17600EC7DEB /* SeconedViewController.swift in Sources */,
 				11BEF28025CBA1F100A68C34 /* ScanViewController.swift in Sources */,
+				11B90C7025DFA10A00B02988 /* DebounceViewController.swift in Sources */,
 				11BEF28A25CBDC3300A68C34 /* FilterViewController.swift in Sources */,
 				11BEF28F25CBDF0F00A68C34 /* UntilChangedViewController.swift in Sources */,
 				1106F83F25BAA433009C9016 /* TableCell.swift in Sources */,

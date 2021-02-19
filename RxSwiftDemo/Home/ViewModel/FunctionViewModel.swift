@@ -20,7 +20,9 @@ struct FunctionViewModel {
         Function(name: "GroupBy 使用"),
         Function(name: "Filter 使用"),
         Function(name: "distinctUntilChanged 使用"),
-        Function(name: "single & elementAt 使用")
+        Function(name: "single & elementAt 使用"),
+        Function(name: "debounce 使用")
+
 
 
 
